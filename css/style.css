@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#60666a;
+    --black:#000000;
+    --bg:#000000;
+    --border:.1rem solid rgb(255, 255, 255);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding:2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+/* ------ Começo da parte Navbar/navegador ------ */
+.navegador{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    --bg:#000005;
+}
+
+.navegador .logo img{
+    height: 4rem;
+}
+
+.navegador .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+
+.navegador .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.navegador .icons div{
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.navegador .icons div:hover{
+    color:var(--main-color);
+}
+
+.navegador .search-form{
+    position: absolute;
+    top:115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.navegador .search-form.active{
+    transform: scaleY(1);
+}
+
+.navegador .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+.navegador .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+
+.navegador .search-form label:hover{
+    color:var(--main-color);
+}
+
+.navegador .cart-items-container{
+    position: absolute;
+    top:100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+
+.navegador .cart-items-container.active{
+    right: 0;
+    background-color: #f0f0f0;
+}
+
+.navegador .cart-items-container h1{
+    margin-top: 1.8rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #02090e;
+}
+
+.navegador .cart-items-container p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #02090e;
+    font-weight: 450;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.navegador .cart-items-container .cart-item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 4rem;
+}
+
+.navegador .cart-items-container .cart-item a{
+    padding-bottom: .5rem;
+}
+
+.navegador .cart-items-container .final h2{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #02090e;
+    font-weight: 450;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.navegador .cart-items-container .final p{
+   text-align: start;
+   font-size: 1.5rem;
+}
+/* ------ Fim da parte Navbar/navegador ------ */
+
+
+/* ------ Começo da parte Inicial ------ */
+.inicial{
+    min-height: 109vh;
+    display: flex;
+    align-items: center;
+    background:url(../img/Inicial.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicial .content{
+    max-width:65rem;
+}
+
+.inicial .content h3{
+    font-size: 6rem;
+    color:#fff;
+}
+
+.inicial .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color:#eee;
+}
+
+.inicial .content .btn{
+   background-color: #030317;
+   border-radius: 3em;
+   border: 0.1px solid #ffffff8e;
+}
+/* ------ Final da parte Inicial ------ */
+
+
+/* ------ Começo da parte Figma ------ */
+.figma .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+
+.figma .row .image{
+    flex:1 1 45rem;
+}
+
+.figma .row .image img{
+    width: 95%;
+}
+
+.figma .row .content{
+    flex:1 1 45rem;
+    padding:2rem;
+}
+
+.figma .row .content h3{
+    font-size: 3rem;
+    color:#fff;
+}
+
+.figma .row .content p{
+    font-size: 1.9rem;
+    color:#ccc;
+    padding:1.9rem 0;
+    line-height: 2;
+}
+/* ------ Fim da parte Figma ------ */
+
+
+/* ------ Começo da parte Projetos ------ */
+.projetos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.projetos .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);  
+    color: #ffffff00;
+}
+
+.projetos .box-container .box img{
+    height: 10rem;
+}
+
+.projetos .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+.projetos .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.projetos .box-container .box:hover{
+    background:#fff;
+}
+
+.projetos .box-container .box:hover > *{
+    color:var(--black);
+}
+/* ------ Fim da parte Projetos ------ */
+
+
+/* ------ Começo da parte Principais ------ */
+.principais .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.principais .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+}
+
+.principais .box-container .box .image{
+    padding: 2.5rem 0;
+}
+
+.principais .box-container .box .image img{
+    height: 25rem;
+    border:var(--border);
+    object-fit: cover;
+    width: 100%;
+}
+
+.principais .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.principais .box-container .box .content h3{
+    color:#fff;
+    font-size: 2.8rem;
+}
+
+.principais .box-container .box .stars{
+    padding: 1.8rem;
+}
+
+.principais .box-container .box .stars i{
+    font-size: 1.7rem;
+    color: #f4d472;
+}
+
+.principais .box-container .box .content .price{
+    color:#fff;
+    font-size: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+}
+
+.principais .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+/* ------ Fim da parte Principais ------ */
+
+
+/* ------ Começo da parte História ------ */
+.historia .row{
+    display: flex;
+    align-items: center;
+    background:var(--black);
+    flex-wrap: wrap;
+}
+
+.historia .row .image{
+    flex:1 1 48rem;
+}
+
+.historia .row .image img{
+    width: 100%;
+}
+
+.historia .row .content{
+    flex:3 2 60rem;
+    padding:3.5rem;
+}
+
+.historia .row .content p{
+    font-size: 2rem;
+    color:#ccc;
+    padding:0.9rem 2;
+    line-height: 1.8;
+}
+
+.historia .row .content a{
+
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.8rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.historia .row .content a:hover{
+    background:var(--main-color);
+}
+
+.historia .row .content .icons{
+    text-align: center;
+}
+/* ------ Fim da parte História ------ */
+
+
+/* ------ Começo da parte Mais+ ------ */
+.mais .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+}
+
+.mais .box-container .box{
+    border:var(--border);    
+}
+
+.mais .box-container .box .image{
+    height: 26rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.mais .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.mais .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.mais .box-container .box .content{
+    padding:2rem;
+}
+
+.mais .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.8rem;
+    color:#fff;
+}
+
+.mais .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.mais .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 0.7rem;
+    font-size: 1.6rem;
+}
+
+.mais .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:0.6rem 0;
+}
+
+.mais .box-container .box .content i{
+    line-height: 1.8;
+    padding:0.8rem 0;
+    font-size: 1.7rem;
+    color: #f4d472;
+}
+/* ------ Fim da parte Mais+ ------ */
+
+
+/* ------ Começo da parte Contato ------ */
+.contato .row{
+    display: flex;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contato .row .map{
+    flex:1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contato .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contato .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contato .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+
+.contato .row form .inputBox span{
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contato .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size: 1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+/* ------ Fim da parte Contato ------ */
+
+
+/* ------ Começo da parte Footer ------ */
+.footer{
+    background:var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+/* ------ Fim da parte Footer ------ */
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .navegador .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .navegador .navbar.active{
+        right:0;
+    }
+
+    .navegador .navbar a{
+        color:var(--black);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+    .navegador .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
